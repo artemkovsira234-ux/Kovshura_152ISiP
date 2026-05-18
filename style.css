@@ -1,6 +1,6 @@
 /* Корневые переменные для светлой темы */
 :root {
-  --bg-color: #ffffff;        /* Цвет фона страницы */
+  --bg-color: red;        /* Цвет фона страницы */
   --text-color: #111111;      /* Цвет текста */
   --card-bg: #f5f5f7;         /* Цвет фона карточек */
   --card-border: #e0e0e0;     /* Цвет рамок */
@@ -237,7 +237,7 @@ footer {
 }
 
 /* Эффект при наведении на кнопку */
-.request-block button:hover {
+.request-block button:hover {© Ковшура А.В., 2026
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
