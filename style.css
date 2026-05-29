@@ -1,17 +1,15 @@
-/* Корневые переменные для светлой темы */
 :root {
-  --bg-color: #ffffff;        /* Цвет фона страницы */
-  --text-color: #111111;      /* Цвет текста */
-  --card-bg: #f5f5f7;         /* Цвет фона карточек */
-  --card-border: #e0e0e0;     /* Цвет рамок */
-  --btn-bg: #e8e8ed;          /* Цвет фона кнопок */
-  --btn-text: #111111;        /* Цвет текста на кнопках */
-  --nav-bg: #ffffff;          /* Цвет фона меню */
-  --transition: 0.3s ease;    /* Скорость плавных переходов */
-  color-scheme: light;        /* Подсказка браузеру, что тема светлая */
+  --bg-color: #ffffff;        
+  --text-color: #111111;     
+  --card-bg: #f5f5f7;         
+  --card-border: #e0e0e0;     
+  --btn-bg: #e8e8ed;          
+  --btn-text: #111111;        
+  --nav-bg: #ffffff;          
+  --transition: 0.3s ease;    
+  color-scheme: light;        
 }
 
-/* Если в системе включена тёмная тема — автоматически меняем переменные */
 @media (prefers-color-scheme: dark) {
   :root {
     --bg-color: #121212;
@@ -25,7 +23,6 @@
   }
 }
 
-/* Светлая тема (когда нажали кнопку или выбрали вручную) */
 [data-theme="light"] {
   --bg-color: #ffffff;
   --text-color: #111111;
@@ -37,7 +34,6 @@
   color-scheme: light;
 }
 
-/* Тёмная тема (когда нажали кнопку или выбрали вручную) */
 [data-theme="dark"] {
   --bg-color: #121212;
   --text-color: #e8e8ed;
@@ -49,14 +45,12 @@
   color-scheme: dark;
 }
 
-/* Обнуляем отступы у всех элементов */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Основные стили для всей страницы */
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
@@ -66,52 +60,46 @@ body {
   min-height: 100vh;
 }
 
-/* ШАПКА САЙТА — всё по центру */
 header {
-  text-align: center;           /* Выравниваем заголовок по центру */
+  text-align: center;           
   padding: 2rem 1rem 1rem;
   background-color: var(--bg-color);
 }
 
-/* Заголовок в шапке */
 header h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
   font-weight: 600;
 }
 
-/* Панель навигации (прилипает при скролле) */
 .nav-bar {
   background-color: var(--nav-bg);
   border-bottom: 1px solid var(--card-border);
   padding: 0.75rem 2rem;
   display: flex;
-  justify-content: center;      /* Кнопки меню по центру */
-  gap: 1rem;                   /* Расстояние между кнопками */
-  position: sticky;            /* Прилипает при скролле */
+  justify-content: center;      
+  gap: 1rem;                  
+  position: sticky;        
   top: 0;
   z-index: 100;
-  backdrop-filter: blur(10px); /* Прозрачный фон с размытием */
+  backdrop-filter: blur(10px); 
 }
 
-/* Ссылки в навигации */
 .nav-bar a {
   padding: 0.6rem 1.5rem;
   background-color: var(--btn-bg);
   color: var(--btn-text);
   border: 1px solid var(--card-border);
-  border-radius: 100px;        /* Скруглённые кнопки */
+  border-radius: 100px;        
   text-decoration: none;
   transition: all var(--transition);
 }
 
-/* Эффект при наведении на кнопку меню */
 .nav-bar a:hover {
-  transform: translateY(-2px);  /* Поднимается вверх */
+  transform: translateY(-2px);  
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Кнопка переключения темы (плавает в правом углу) */
 #theme-toggle {
   padding: 0.6rem 1.2rem;
   background-color: var(--btn-bg);
@@ -119,89 +107,78 @@ header h1 {
   border: 1px solid var(--card-border);
   border-radius: 100px;
   cursor: pointer;
-  position: fixed;             /* Фиксированная позиция */
-  top: 1rem;                   /* Отступ сверху */
-  right: 1rem;                 /* Отступ справа */
-  z-index: 1000;               /* Поверх всех элементов */
+  position: fixed;            
+  top: 1rem;                   
+  right: 1rem;                 
+  z-index: 1000;               
   backdrop-filter: blur(10px);
 }
 
-/* Основной блок с контентом */
 main {
-  max-width: 1000px;           /* Ограничиваем ширину */
-  margin: 2rem auto;           /* Центрируем по горизонтали */
+  max-width: 1000px;          
+  margin: 2rem auto;          
   padding: 0 1.5rem;
 }
 
-/* КАРТОЧКИ — белые блоки с информацией */
 .card {
   background-color: var(--card-bg);
   border: 1px solid var(--card-border);
   border-radius: 24px;
   padding: 2rem;
   margin-bottom: 2rem;
-  text-align: center;          /* Весь текст внутри по центру */
+  text-align: center;          
   transition: all var(--transition);
 }
 
-/* Эффект при наведении на карточку */
 .card:hover {
-  transform: translateY(-4px); /* Поднимается вверх */
+  transform: translateY(-4px); 
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
 }
 
-/* Заголовки внутри карточек */
 .card h2, .card h3 {
   text-align: center;
   margin-bottom: 1rem;
 }
 
-/* Размер заголовка h2 внутри карточки */
 .card h2 {
   font-size: 1.8rem;
 }
 
-/* Размер заголовка h3 внутри карточки */
 .card h3 {
   font-size: 1.4rem;
 }
 
-/* Картинки внутри карточек */
 .content-image {
   border-radius: 20px;
   display: block;
-  margin: 1.5rem auto;         /* Центрируем картинку */
+  margin: 1.5rem auto;        
   transition: transform 0.3s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  max-width: 100%;             /* Не вылезает за пределы */
+  max-width: 100%;            
   height: auto;
 }
 
-/* Эффект увеличения картинки при наведении */
 .content-image:hover {
   transform: scale(1.02);
 }
 
-/* Списки — выравниваем по левому краю внутри центрированной карточки */
+
 .card ul, .card ol {
   text-align: left;
-  display: inline-block;       /* Чтобы можно было центрировать блок */
+  display: inline-block;     
   margin: 1rem auto;
   padding-left: 1.5rem;
 }
 
-/* Элементы списка */
 .card li {
   margin-bottom: 0.5rem;
 }
 
-/* Абзацы внутри карточки */
 .card p {
   text-align: center;
   margin-bottom: 1.2rem;
 }
 
-/* ПОДВАЛ САЙТА */
 footer {
   text-align: center;
   padding: 2rem;
@@ -211,21 +188,18 @@ footer {
   opacity: 0.7;
 }
 
-/* Стили для страницы КОНТАКТЫ */
 .contact-info a {
   color: var(--text-color);
   text-decoration: none;
   border-bottom: 1px dashed var(--card-border);
 }
 
-/* Блок с кнопкой отправки запроса */
 .request-block {
   margin-top: 1.5rem;
   padding-top: 1rem;
   border-top: 1px solid var(--card-border);
 }
 
-/* Кнопка отправки запроса */
 .request-block button {
   padding: 0.8rem 1.8rem;
   background-color: var(--btn-bg);
@@ -236,42 +210,34 @@ footer {
   transition: all var(--transition);
 }
 
-/* Эффект при наведении на кнопку */
 .request-block button:hover {© Ковшура А.В., 2026
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* АДАПТИВНОСТЬ ДЛЯ ТЕЛЕФОНОВ (ширина меньше 768px) */
 @media (max-width: 768px) {
-  /* Уменьшаем заголовок */
   header h1 {
     font-size: 1.8rem;
   }
   
-  /* Уменьшаем отступы между кнопками меню */
   .nav-bar {
     gap: 0.5rem;
     padding: 0.75rem 1rem;
   }
   
-  /* Уменьшаем кнопки меню */
   .nav-bar a {
     padding: 0.5rem 1rem;
     font-size: 0.85rem;
   }
   
-  /* Уменьшаем отступы внутри карточек */
   .card {
     padding: 1.5rem;
   }
   
-  /* Уменьшаем заголовки в карточках */
   .card h2 {
     font-size: 1.4rem;
   }
   
-  /* Уменьшаем кнопку темы */
   #theme-toggle {
     padding: 0.5rem 1rem;
     font-size: 0.8rem;
