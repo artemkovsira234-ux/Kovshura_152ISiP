@@ -1,7 +1,6 @@
 const themeToggleBtn = document.getElementById('theme-toggle');
 const rootElement = document.documentElement;
 
-// Обновление текста и aria-label кнопки
 function updateButtonLabel(theme) {
   if (themeToggleBtn) {
     themeToggleBtn.textContent = theme === 'dark' ? '☀️ Светлая тема' : '🌙 Тёмная тема';
@@ -9,14 +8,12 @@ function updateButtonLabel(theme) {
   }
 }
 
-// Применяем тему
 function applyTheme(theme) {
   rootElement.setAttribute('data-theme', theme);
   localStorage.setItem('theme', theme);
   updateButtonLabel(theme);
 }
 
-// Инициализация при загрузке
 const savedTheme = localStorage.getItem('theme');
 if (savedTheme) {
   applyTheme(savedTheme);
@@ -25,7 +22,6 @@ if (savedTheme) {
   applyTheme(systemPrefersDark ? 'dark' : 'light');
 }
 
-// Обработчик клика
 if (themeToggleBtn) {
   themeToggleBtn.addEventListener('click', () => {
     const currentTheme = rootElement.getAttribute('data-theme');
@@ -34,16 +30,13 @@ if (themeToggleBtn) {
   });
 }
 
-// Следим за изменением системной темы
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
   if (!localStorage.getItem('theme')) {
     applyTheme(e.matches ? 'dark' : 'light');
   }
 });
 
-// Плавная анимация при загрузке страницы
 document.addEventListener('DOMContentLoaded', () => {
-  // Добавляем плавное появление карточек
   const cards = document.querySelectorAll('.card');
   cards.forEach((card, index) => {
     card.style.opacity = '0';
