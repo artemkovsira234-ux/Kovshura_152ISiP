@@ -2,65 +2,49 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>О фруктах — Сезонные характеристики</title>
+    <title>О фруктах</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="theme-header">
-        <button id="theme-toggle" aria-label="Переключить тему">🌙 Тёмная тема</button>
-    </div>
-    
-    <header>
-        <h1>Характеристика сезонных фруктов</h1>
-        <nav class="nav-bar">
-            <a href="index.html">Главная</a>
-            <a href="about.html">О фруктах</a>
-            <a href="contact.html">Контакты</a>
-        </nav>
-    </header>
-    
-    <main>
-        <section class="card">
-            <h2>Весна: клубника, черешня, ранние яблоки</h2>
-            <img src="fruits2.jpeg" width="250" height="250" class="content-image" alt="Весенние фрукты: клубника и черешня">
-            <p>Нежные, сладковатые плоды с высоким содержанием <strong>витамина C</strong>. Помогают укрепить иммунитет после зимы.</p>
-        </section>
+<button id="theme-toggle" style="position:fixed;top:10px;right:10px">🌙 Тёмная</button>
 
-        <section class="card">
-            <h2>Лето: персики, абрикосы, виноград, дыни</h2>
-            <img src="fruits3.jpeg" width="250" height="250" class="content-image" alt="Летние фрукты: персики и виноград">
-            <p>Сочные, насыщенные <strong>витаминами A и E</strong>. Отлично утоляют жажду и придают энергию в жаркий сезон.</p>
-        </section>
+<h1 style="text-align:center">Сезонные фрукты по сезонам</h1>
 
-        <section class="card">
-            <h2>Осень: груши, поздние сорта яблок, хурма</h2>
-            <img src="fruits5.jpeg" width="250" height="250" class="content-image" alt="Осенние фрукты: груши и хурма">
-            <p>Богаты <strong>клетчаткой и антиоксидантами</strong>. Способствуют здоровью кишечника и замедляют старение клеток.</p>
-        </section>
+<nav>
+    <a href="index.html">Главная</a>
+    <a href="about.html">О фруктах</a>
+    <a href="contact.html">Контакты</a>
+</nav>
 
-        <section class="card">
-            <h2>Зима: цитрусовые, гранаты</h2>
-            <img src="fruits4.jpeg" width="250" height="250" class="content-image" alt="Зимние фрукты: цитрусовые и гранат">
-            <p>Отличаются долгим сроком хранения и повышенным содержанием <strong>полезных веществ</strong>. Идеальны для защиты от простуд.</p>
-        </section>
-        
-        <section class="card">
-            <h3>Как выбирать сезонные фрукты?</h3>
-            <ol>
-                <li>Ориентируйтесь на местный календарь созревания.</li>
-                <li>Обращайте внимание на аромат — спелый фрукт пахнет ярко.</li>
-                <li>Покупайте на рынках у фермеров.</li>
-                <li>Избегайте плодов с повреждённой кожурой.</li>
-            </ol>
-        </section>
-    </main>
-    
-    <footer>
-        <p>© Ковшура А.В., 2026</p>
-    </footer>
+<div class="card">
+    <h2>Весна</h2>
+    <img src="fruits2.jpeg" width="250">
+    <p><strong>Клубника, черешня, яблоки</strong> — много витамина C для иммунитета.</p>
+</div>
 
-    <script src="script.js" defer></script>
+<div class="card">
+    <h2>Лето</h2>
+    <img src="fruits3.jpeg" width="250">
+    <p><strong>Персики, абрикосы, виноград, дыни</strong> — сочные и сладкие.</p>
+</div>
+
+<div class="card">
+    <h2>Осень</h2>
+    <img src="fruits5.jpeg" width="250">
+    <p><strong>Груши, яблоки, хурма</strong> — много клетчатки.</p>
+</div>
+
+<div class="card">
+    <h2>Зима</h2>
+    <img src="fruits4.jpeg" width="250">
+    <p><strong>Цитрусовые, гранаты</strong> — защита от простуды.</p>
+</div>
+
+<footer>
+    <p>© Ковшура А.В., 2026</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
