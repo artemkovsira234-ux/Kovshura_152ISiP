@@ -2,57 +2,33 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Контакты — Свяжитесь с нами</title>
+    <title>Контакты</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <div class="theme-header">
-        <button id="theme-toggle" aria-label="Переключить тему">🌙 Тёмная тема</button>
-    </div>
-    
-    <header>
-        <h1>Контакты</h1>
-        <nav class="nav-bar">
-            <a href="index.html">Главная</a>
-            <a href="about.html">О фруктах</a>
-            <a href="contact.html">Контакты</a>
-        </nav>
-    </header>
 
-    <main>
-        <section class="card contact-info">
-            <h2>Свяжитесь с нами</h2>
-            
-            <p><strong>Телефон:</strong> 
-                <a href="tel:+71234567890">+7 (123) 456-78-90</a>
-            </p>
-            
-            <p><strong>Email:</strong> 
-                <a href="mailto:fruits@gmail.com">fruits@gmail.com</a>
-            </p>
-            
-            <div class="request-block">
-                <h3>Отправить запрос</h3>
-                <p>Вы можете написать нам на почту — мы ответим в ближайшее время!</p>
-                <a href="#">
-                    <button type="button">ОТПРАВИТЬ ЗАПРОС</button>
-                </a>
-            </div>
-        </section>
-        
-        <section class="card">
-            <h3>Наш офис</h3>
-            <p>г. Барнаул, ул. Фруктовая, д. 7, офис 42</p>
-            <p>Режим работы: пн–пт с 10:00 до 19:00</p>
-        </section>
-    </main>
+<button id="theme-toggle" style="position:fixed;top:10px;right:10px">🌙 Тёмная</button>
 
-    <footer>
-        <p>© Ковшура А.В., 2026</p>
-    </footer>
+<h1 style="text-align:center">Контакты</h1>
 
-    <script src="script.js" defer></script>
+<nav>
+    <a href="index.html">Главная</a>
+    <a href="about.html">О фруктах</a>
+    <a href="contact.html">Контакты</a>
+</nav>
+
+<div class="card">
+    <h2>Свяжитесь с нами</h2>
+    <p><strong>Телефон:</strong> <a href="tel:+71234567890">+7 (123) 456-78-90</a></p>
+    <p><strong>Email:</strong> <a href="mailto:fruits@gmail.com">fruits@gmail.com</a></p>
+    <p><strong>Адрес:</strong> г. Барнаул, ул. Фруктовая, д. 7</p>
+    <p><strong>Режим работы:</strong> пн–пт 10:00–19:00</p>
+</div>
+
+<footer>
+    <p>© Ковшура А.В., 2026</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
